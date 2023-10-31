@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troomba showcase website</title>
+    <title>Troomba contact</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -16,20 +16,18 @@
             <img src="../images/troomba_logo.png" alt="silhouet van roomba" id="logo">
         </a>
 
-        <a href="">Nu kopen</a>
+        <a href="../pages/bestellen.html">Nu kopen</a>
 
-        <a href="">Contact formulier</a>
+        <a href="#contactformulier">Contact formulier</a>
 
-        <a href="">Contact informatie</a>
-
-        </div>
+        <a href="#contactinformatie">Contact informatie</a>
 
     </nav>
 
 
-    <main>
+    <header id="contactheader">
 
-        <section id="contact_formulier">
+        <article>
 
             <h2>Contact formulier</h2>
 
@@ -38,26 +36,55 @@
                 zullen binnen 3-5 werkdagen een mail terug sturen.
             </p>
 
+        </article>
+
+    </header>
+
+    <main>
+
+        <section id="contactformulier">
+
             <form>
 
                 <div>
 
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" id="voornaam" name="voornaam" value="voornaam" required>
-
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" id="achternaam" name="achternaam" value="achternaam" required>
+                    <label for="voornaam">Voornaam*</label>
+                    <input type="text" id="voornaam" name="voornaam" placeholder="voornaam" required>
 
                 </div>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" value="email" required>
+                <div>
 
-                <label for="bericht">Uw bericht</label>
+                    <label for="achternaam">Achternaam*</label>
+                    <input type="text" id="achternaam" name="achternaam" placeholder="achternaam" required>
+
+                </div>
+
+                <div>
+
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+
+                </div>
+
+                <label for="bericht">Uw bericht*</label>
                 <textarea name="bericht" id="bericht" cols="30" rows="10" required></textarea>
 
-                <label for="garantie">Heeft u nog garantie op uw Troomba?</label>
-                <input type="checkbox" name="garantie" id="garantie" required>
+                <div>
+
+                    <input type="checkbox" name="garantie" id="garantie">
+                    <label for="garantie">Heeft u nog garantie op uw Troomba?</label>
+
+                </div>
+
+                <div>
+
+                    <input type="checkbox" name="nieuwsbrief" id="nieuwsbrief">
+                    <label for="nieuwsbrief">Wilt u abboneeren op onze nieuwsbrief?</label>
+
+                </div>
+
+                <p>* verplichte velden</p>
 
                 <button type="submit">Bericht verzenden</button>
 
@@ -65,7 +92,62 @@
 
         </section>
 
-        <section>
+        <section id="contactinformatie">
+
+            <h2>Heeft u een andere reden om contact op te nemen?</h2>
+
+            <p>
+                In het geval dat u niet een vraag over een van onze producten heeft, maar bijvoorbeel geinteressert bent
+                in soliciteren, investeren of een partnership regelen kunt u ons berijken met de volgende gegevens:
+            </p>
+
+            <div>
+
+                <article>
+
+                    <div>
+
+                        <div>
+
+                            <p>Sander Landmeter</p>
+
+                            <p>Web developer</p>
+
+                        </div>
+
+                        <div>
+                            <img src="../images/Profiel_foto_placeholder_3.jpg" alt="Profiel foto van ____">
+                        </div>
+
+                    </div>
+
+                    <p>1087172@hr.nl</p>
+
+                </article>
+
+                <article>
+
+                    <div>
+
+                        <div>
+
+                            <p>Kasper</p>
+
+                            <p>Product designer</p>
+
+                        </div>
+
+                        <div>
+                            <img src="../images/Profiel_foto_placeholder_2.jpg" alt="Profiel foto van ____">
+                        </div>
+
+                    </div>
+
+                    <p>1078780@hr.nl</p>
+
+                </article>
+
+            </div>
 
         </section>
 

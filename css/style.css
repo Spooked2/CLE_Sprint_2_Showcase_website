@@ -1,147 +1,427 @@
+/* 
+Color palette
+Black rgb(26, 26, 26);
+White rgb(255, 255, 255);
+grey rgb(128, 128, 128);
+blue rgb(30, 43, 175);
+light blue rgb(153, 201, 244);
+light grey rgb(230, 230, 230);
+*/
+
+
+/* 
+Broad styling
+*/
+
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background-color: gray;
+    background-color: rgb(230, 230, 230);
 }
 
 a {
     text-decoration: none;
+    color: rgb(26, 26, 26);
 }
+
+p {
+    font-size: 1rem;
+}
+
+div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* 
+Nav styling
+*/
 
 nav {
     position: sticky;
     top: 1vh;
-    background-color: gray;
-    max-height: 8vh;
+    background-color: rgb(230, 230, 230);
+    height: 8vh;
     margin: 0vh 25vw 4vh;
     border-radius: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 30px;
+    gap: 1vw;
+    z-index: 10;
 }
+
+nav a {
+    transition: ease-out 0.1s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+/* 
+index.html styling
+*/
 
 #logo {
     width: 70px;
-    border: 2px solid black;
+    border: 2px solid rgb(26, 26, 26);
     border-radius: 10px;
 }
 
-header {
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+header:not(#contactheader) {
+    border-top: rgb(26, 26, 26) solid 2px;
+    border-bottom: rgb(26, 26, 26) solid 2px;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 92vh;
     background-image: url(../images/Roomba_site_background.jpg);
     background-position: bottom;
 }
 
-header article {
+header:not(#contactheader) article {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10vw;
-    width: 60vw;
+    padding: 1vw;
+    width: 30vw;
+    border: 1px rgb(26, 26, 26) solid;
+    background-color: rgba(230, 230, 230, 0.5);
+    backdrop-filter: blur(10px);
+    transition: ease-out 0.2s;
 }
 
-header article a {
+header:not(#contactheader) article:hover {
+    transform: scale(1.06);
+}
+
+header:not(#contactheader) article a {
     padding: 5px;
-    border: 2px solid black;
-    background-color: aquamarine;
+    border: 2px solid rgb(26, 26, 26);
+    background-color: rgb(153, 201, 244);
     border-radius: 5px;
     margin-right: 5px;
-    color: black;
+    color: rgb(26, 26, 26);
 }
 
 .hd-buttons {
     display: flex;
 }
 
-main {
-    background-color: white;
-    padding: 3vh 0vh;
+.hd-buttons a {
+    transition: ease-out 0.1s;
 }
 
-main section article img {
-    width: 150px;
+.hd-buttons a:hover {
+    transform: scale(1.03);
+    transform: scaleY(1.1);
+}
+
+main {
+    background-color: white;
+}
+
+#general {
+    padding: 10vh 15vw;
 }
 
 #algemeen div img {
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid rgb(26, 26, 26);
 }
 
 #algemeen {
     display: flex;
-    justify-content: center;
-    gap: 150px;
-    margin: 20px;
-    width: 90vw;
-    border: 2px solid black;
-    background-color: beige;
+    justify-content: space-between;
+    margin: 5vh 0;
+    height: 35vh;
+    padding: 2vw;
+    border: 2px solid rgb(30, 43, 175);
+    background-color: rgb(153, 201, 244);
     border-radius: 10px;
-    padding: 20px 50px;
+    transition: ease-out 0.2s;
 }
 
-#specifics {
-    padding: 8vh 8vw;
-    height: 80vh;
-    position: relative;
-    clear: both;
+#algemeen:hover {
+    transform: scale(1.05);
 }
 
-#tab [type=radio] {
+#algemeen>div {
+    flex: 0 0 45%;
+}
+
+#algemeen>div:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+#algemeen>div>div {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#details {
+    padding: 8vh 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(128, 128, 128);
+}
+
+#details [type=radio] {
     display: none;
 }
 
-#tab {
-    float: left;
+#details>div:first-child {
+    display: flex;
+    align-items: center;
 }
 
-#tab label {
-    position: relative;
-    background-color: gray;
-    padding: 1vw;
+#details>div:first-child label {
+    padding: 1vh 2vw;
+    border: rgb(26, 26, 26) solid 2px;
+    border-bottom: none;
+    background-color: rgb(230, 230, 230);
+}
+
+#details>div:first-child label:hover {
+    cursor: pointer;
+}
+
+#details>div:first-child label+label {
+    border-left: none;
 }
 
 #specificaties {
-    position: absolute;
-    top: 13vh;
-    left: 8vw;
-    height: 60vh;
-    width: 84vw;
-    padding: 2vw;
-    background-color: gray;
-    display: flex;
+    display: none;
+    padding: 3vw;
+    border: rgb(26, 26, 26) solid 2px;
+    background-color: rgb(153, 201, 244);
     justify-content: space-evenly;
-    align-items: stretch;
-    gap: 3vw;
+    gap: 5vw;
+    height: 50vh;
 }
 
 #specificaties>div:first-child {
-    flex: 1 1 40%;
+    flex-basis: 20vw;
 }
 
-#specificaties img {
-    width: 100%;
+#specificaties>div:last-child {
+    flex-basis: 50vw;
 }
 
-[type=radio]:checked~label {
+[type=radio]:checked~#specificaties {
+    display: flex;
+}
+
+
+/* 
+contact.html styling
+*/
+
+#contactheader {
+    border-top: rgb(26, 26, 26) solid 2px;
+    border-bottom: rgb(26, 26, 26) solid 2px;
+    background-color: rgb(128, 128, 128);
+    background-image: url(../images/contact_background.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(26, 26, 26);
+    padding: 10vh 15vw;
+}
+
+#contactheader article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 1vw;
+    width: 30vw;
+    border: 1px rgb(26, 26, 26) solid;
+    background-color: rgba(230, 230, 230, 0.5);
+    backdrop-filter: blur(10px);
+    transition: ease-out 0.2s;
+}
+
+
+#contactheader p,
+#contactheader h2 {
+    padding: 3vh 0vw;
+}
+
+#contactheader h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#contactformulier {
+    padding: 10vh 15vw;
     background-color: white;
-    z-index: 2;
 }
 
-[type=radio]:checked~label~#specificaties {
-    z-index: 1;
+#contactformulier form {
+    background-color: white;
+    padding: 2vh 2vw;
+    border: solid rgb(26, 26, 26) 1px;
+    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.52);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 60vw;
+    margin: auto;
 }
+
+#contactformulier form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+}
+
+#contactformulier form p {
+    filter: opacity(50%);
+}
+
+#contactformulier form button {
+    background-color: rgba(30, 43, 175, 0.2);
+    color: rgb(26, 26, 26);
+    border: rgb(30, 43, 175) solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1vw;
+    font-size: 1.3rem;
+}
+
+#contactformulier form button:hover {
+    cursor: pointer;
+    background-color: rgb(30, 43, 175);
+    color: white;
+    border: rgb(26, 26, 26) solid 1px;
+}
+
+#contactformulier form input {
+    flex: 3 1;
+    padding: 1vw;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#contactformulier form textarea {
+    border-radius: 5px;
+}
+
+#contactformulier form input:invalid,
+#contactformulier form textarea:invalid {
+    border: red solid 2px;
+}
+
+#contactformulier form input:valid,
+#contactformulier form textarea:valid {
+    border: green solid 2px;
+}
+
+#contactformulier form label {
+    flex: 1 1;
+}
+
+#contactformulier form input[type=checkbox] {
+    flex: 0 1;
+    align-self: flex-start;
+}
+
+#contactformulier form input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+#contactformulier form input[type=checkbox]+label:hover {
+    cursor: pointer;
+}
+
+#contactinformatie {
+    padding: 2vh 15vw;
+    background-color: rgb(153, 201, 244);
+}
+
+#contactinformatie p,
+#contactinformatie h2 {
+    padding: 3vh 0vw;
+}
+
+#contactinformatie h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#contactinformatie div,
+#contactinformatie article {
+    display: flex;
+    border-radius: 5px;
+}
+
+#contactinformatie>div {
+    justify-content: space-evenly;
+    gap: 8vw;
+}
+
+#contactinformatie article {
+    flex-direction: column;
+    width: 25vw;
+    padding: 1vw;
+    gap: 1vh;
+    background-color: rgb(230, 230, 230);
+    border: solid rgb(26, 26, 26) 1px;
+    text-align: center;
+    transition: ease-out 0.1s;
+    margin: 3vh 0vw;
+}
+
+#contactinformatie article:hover {
+    transform: scale(1.1);
+}
+
+#contactinformatie article>div {
+    gap: 1vw;
+}
+
+#contactinformatie article>div>div:first-child {
+    flex-direction: column;
+    flex: 0 0 40%;
+}
+
+#contactinformatie article>div>div:last-child {
+    flex: 0 0 40%;
+}
+
+
+/* 
+Footer styling
+*/
 
 footer {
-    background-color: rgb(28, 28, 28);
-    padding: 2vh 5vw;
+    background-color: rgb(26, 26, 26);
+    padding: 2vh 10vw;
     color: white;
     display: flex;
     align-items: center;
@@ -150,4 +430,11 @@ footer {
 
 footer a {
     margin-left: auto;
+    color: white;
+    transition: ease-out 0.1s;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
 }
