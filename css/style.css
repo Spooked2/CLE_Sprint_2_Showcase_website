@@ -42,6 +42,44 @@ div>img {
     object-fit: fill;
 }
 
+form button {
+    background-color: rgba(30, 43, 175, 0.2);
+    color: rgb(26, 26, 26);
+    border: rgb(30, 43, 175) solid 2px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1vw;
+    font-size: 1.3rem;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: rgb(30, 43, 175);
+    color: white;
+    border: rgb(26, 26, 26) solid 2px;
+}
+
+form input {
+    flex: 3 1;
+    padding: 1vw;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form textarea {
+    border-radius: 5px;
+}
+
+form input:invalid,
+form textarea:invalid {
+    border: red solid 2px;
+}
+
+form input:valid,
+form textarea:valid {
+    border: green solid 2px;
+}
+
 /* 
 Nav styling
 */
@@ -303,44 +341,6 @@ contact.html styling
     filter: opacity(50%);
 }
 
-#contactformulier form button {
-    background-color: rgba(30, 43, 175, 0.2);
-    color: rgb(26, 26, 26);
-    border: rgb(30, 43, 175) solid 1px;
-    border-radius: 5px;
-    text-align: center;
-    padding: 1vw;
-    font-size: 1.3rem;
-}
-
-#contactformulier form button:hover {
-    cursor: pointer;
-    background-color: rgb(30, 43, 175);
-    color: white;
-    border: rgb(26, 26, 26) solid 1px;
-}
-
-#contactformulier form input {
-    flex: 3 1;
-    padding: 1vw;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-#contactformulier form textarea {
-    border-radius: 5px;
-}
-
-#contactformulier form input:invalid,
-#contactformulier form textarea:invalid {
-    border: red solid 2px;
-}
-
-#contactformulier form input:valid,
-#contactformulier form textarea:valid {
-    border: green solid 2px;
-}
-
 #contactformulier form label {
     flex: 1 1;
 }
@@ -414,6 +414,128 @@ contact.html styling
     flex: 0 0 40%;
 }
 
+/* 
+Bestellen styling
+*/
+
+section:only-child {
+    border-top: rgb(26, 26, 26) ridge 3px;
+    background-color: rgb(30, 43, 175);
+    background-image: url(../images/background_test.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 5vh 0vw;
+}
+
+section:only-child h2 {
+    margin: 0vh 15vw;
+    padding: 3vw;
+    background-color: rgb(153, 201, 244);
+    font-size: 2.5rem;
+}
+
+#bestelformulier {
+    margin: 8vh 15vw;
+    margin-top: 0;
+    padding: 3vw;
+    background-color: rgb(153, 201, 244);
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+#bestelformulier div,
+#bestelformulier div div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bestelformulier div div {
+    flex-direction: column;
+}
+
+#bestelformulier div div div {
+    flex-direction: row;
+    gap: 2vw;
+}
+
+#bestelformulier>div:not(#bestelformulier>div:nth-child(5)) {
+    align-items: center;
+}
+
+#bestelformulier>div:nth-child(5) {
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: center;
+}
+
+#bestelformulier>div:nth-child(5)>div {
+    border: rgb(26, 26, 26) solid 2px;
+    padding: 1vw;
+    background-color: rgb(230, 230, 230);
+    gap: 2vh;
+    flex-basis: 40%;
+}
+
+#bestelformulier>div:nth-child(5)>div>div {
+    align-items: center;
+}
+
+#bestelformulier input {
+    flex-basis: 55%;
+    padding: 1vw;
+}
+
+#bestelformulier label {
+    flex: 1 0 25%;
+}
+
+#bestelformulier p:nth-child(2) {
+    filter: opacity(50%);
+    margin-top: 0;
+}
+
+#bestelformulier textarea {
+    width: 30%;
+}
+
+/* 
+Bedankt styling
+*/
+
+#bedankt {
+    background-image: url(../images/background_test.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 29vh 0;
+}
+
+#bedankt article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1vw;
+    width: 30vw;
+    border: 1px rgb(26, 26, 26) solid;
+    background-color: rgba(230, 230, 230, 0.5);
+    backdrop-filter: blur(10px);
+    transition: ease-out 0.2s;
+}
+
+#bedankt article:hover {
+    transform: scale(1.1);
+}
+
+#bedankt h2 {
+    font-size: 3rem;
+}
+
+#bedankt p {
+    font-size: 2rem;
+}
 
 /* 
 Footer styling
